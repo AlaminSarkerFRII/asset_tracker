@@ -7,6 +7,8 @@ from .models import Company, Device, Employee, DeviceLog
 from .serializers import CompanySerializer, EmployeeSerializer, DeviceSerializer, DeviceLogSerializer
 
 
+# ================= > Company List API view ================= >
+
 class CompanyListAPI(APIView):
     permission_classes = []
 
@@ -31,6 +33,8 @@ class CompanyListAPI(APIView):
             return Response(result)
         return Response(result_error)
 
+
+# ================= > Employee List API view ================= >
 
 class EmployeeListAPI(APIView):
     permission_classes = []
@@ -57,7 +61,8 @@ class EmployeeListAPI(APIView):
         return Response(result_error)
 
 
-# Device API view
+# ================= > Device API view ================= >
+
 class DeviceListAPI(APIView):
     permission_classes = []
 
@@ -83,7 +88,9 @@ class DeviceListAPI(APIView):
         return Response(result_error)
 
 
-# Device Log API view
+
+# ================= > Device Log API view ================= >
+
 class DeviceLogListAPI(APIView):
     permission_classes = []
 
@@ -107,3 +114,5 @@ class DeviceLogListAPI(APIView):
             result['data'] = device_log_serializer
             return Response(result)
         return Response(result_error)
+    
+    
