@@ -5,8 +5,8 @@ from .models import Company, Employee, Device, DeviceLog
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
-        fields = ['id', 'name','company_details', 'employees']
-        readonly_fields = ['id']
+        fields = ['id', 'name','company_details',]
+        readOnly_fields = ['id']
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
@@ -14,15 +14,15 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Employee
-        fields = ['id', 'name', 'company', 'company_name','user']
-        readonly_fields = ['id']
+        fields = ['id', 'name', 'company', 'company_name',]
+        readOnly_fields = ['id']
 
 
 class DeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Device
-        fields = '__all__'
-        readonly_fields = ['id']
+        fields = ['id', 'name', 'type','serial_number','condition','company']
+        readOnly_fields = ['id']
 
 
 class DeviceLogSerializer(serializers.ModelSerializer):

@@ -16,7 +16,6 @@ admin.site.register(Company, CompanyAdmin)
 class EmployeeAdmin(admin.ModelAdmin):
     model = Employee
     fields = ['name', 'company']
-    readonly_fields = ['name', 'company']
 
 
 admin.site.register(Employee, EmployeeAdmin)
@@ -24,7 +23,7 @@ admin.site.register(Employee, EmployeeAdmin)
 
 class DeviceAdmin(admin.ModelAdmin):
     model = Device
-    fields = ['name']
+    fields = ['name', 'type','serial_number','condition','company']
 
 
 admin.site.register(Device, DeviceAdmin)
