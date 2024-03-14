@@ -7,7 +7,6 @@ from django.db import models
 class Company(models.Model):
     name = models.CharField(max_length=100)
     company_details = models.TextField(max_length=500, blank=True, null=True)
-    employees = models.ManyToManyField('Employee', through='Assignment')
 
     class Meta:
         db_table = 'company'
