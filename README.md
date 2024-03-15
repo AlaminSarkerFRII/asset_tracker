@@ -56,28 +56,28 @@ The API provides the following endpoints:
 
 - `api/company-list/`: List companies.
 - `api/company/detail/<int:id>/`: Details of companies.
-- 'api/company/update/<int:id>': update specific company with id
-- 'api/company/create/<int:id>': Create company with id
-- 'api/company/delete/<int:id>': delete specific company with id
+- `api/company/update/<int:id>/`: update specific company with id
+- `api/company/create/<int:id>/`: Create company with id
+- `api/company/delete/<int:id>/`: delete specific company with id
 
 
 - `api/employee-list/`: List Employees.
 - `api/employee/detail/<int:id>/`: Details of Employee.
-- 'api/employee/update/<int:id>': update specific Employee with id
-- 'api/employee/create/<int:id>': Create Employee with id
-- 'api/employee/delete/<int:id>': delete specific Employee with id
+- `api/employee/update/<int:id>/`: update specific Employee with id
+- `api/employee/create/<int:id>/`: Create Employee with id
+- `api/employee/delete/<int:id>/`: delete specific Employee with id
 
 - `api/device-list/`: List Devices.
 - `api/device/detail/<int:id>/`: Details of Device.
-- 'api/device/update/<int:id>': update specific Device with id
-- 'api/device/create/<int:id>': Create Device with id
-- 'api/device/delete/<int:id>': delete specific Device with id
+- `api/device/update/<int:id>/`: update specific Device with id
+- `api/device/create/<int:id>/`: Create Device with id
+- `api/device/delete/<int:id>/`: delete specific Device with id
 
 
 - `api/device-log-list/`: List Devices Logs.
 - `api/device-log/detail/<int:id>/`: Details of Device Log.
-- 'api/device-log/update/<int: id>': update specific Device Log with id
-- 'api/device-log/create/<int: id>': Create Device Log with id
-- 'api/device-log/delete/<int: id>': delete specific Device Log with id
+- `api/device-log/update/<int:id>/`: update specific Device Log with id
+- `api/device-log/create/<int:id>/`: Create Device Log with id
+- `api/device-log/delete/<int:id>/`: delete specific Device Log with id
 
 
