@@ -85,7 +85,40 @@ class CompanyListAPI(APIView):
         result_error['data'] = serializer.errors
         return Response(result_error)
     
+    
+    
+# ========= Company Details API =======>
+    
+    
+class CompanyDetailsAPI(APIView):
+    
+    permission_classes = []
 
+    
+    def get(self, request, id):
+        result = {
+            'status': HTTP_200_OK,
+            'message': 'Success',
+            'data': {}
+        }
+        
+        result_error = {
+            'status': HTTP_404_NOT_FOUND,
+            'message': 'Company Not Found',
+            'data': {}
+        }
+
+        try:
+            company = Company.objects.get(id=id)
+            serializer = CompanySerializer(company)
+            result['data'] = serializer.data
+            return Response(result)
+        except Company.DoesNotExist:
+            return Response(result_error)
+        
+        
+    
+# ========= Company Delete API =======>
     
 class CompanyDeleteAPI(APIView):
     permission_classes = []
@@ -192,7 +225,35 @@ class EmployeeListAPI(APIView):
         result_error['data'] = serializer.errors
         return Response(result_error)
     
+# =========> Employee Details API =================>
+
+class EmployeeDetailsAPI(APIView):
     
+    permission_classes = []
+
+    
+    def get(self, request, id):
+        result = {
+            'status': HTTP_200_OK,
+            'message': 'Success',
+            'data': {}
+        }
+        
+        result_error = {
+            'status': HTTP_404_NOT_FOUND,
+            'message': 'Employee Not Found',
+            'data': {}
+        }
+
+        try:
+            employee = Employee.objects.get(id=id)
+            serializer = EmployeeSerializer(employee)
+            result['data'] = serializer.data
+            return Response(result)
+        except Employee.DoesNotExist:
+            return Response(result_error)
+
+# =========> Employee Details API =================>
 
 class EmployeeDeleteAPI(APIView):
     
@@ -222,6 +283,7 @@ class EmployeeDeleteAPI(APIView):
 # ================= > Device API view ================= >
 
 class DeviceListAPI(APIView):
+    
     permission_classes = []
 
     def get(self, request):
@@ -297,6 +359,35 @@ class DeviceListAPI(APIView):
         
         result_error['data'] = serializer.errors
         return Response(result_error)
+    
+
+
+class DeviceDetailsAPI(APIView):
+    
+    permission_classes = []
+
+    
+    def get(self, request, id):
+        result = {
+            'status': HTTP_200_OK,
+            'message': 'Success',
+            'data': {}
+        }
+        
+        result_error = {
+            'status': HTTP_404_NOT_FOUND,
+            'message': 'Employee Not Found',
+            'data': {}
+        }
+
+        try:
+            device = Device.objects.get(id=id)
+            serializer = DeviceSerializer(device)
+            result['data'] = serializer.data
+            return Response(result)
+        except Device.DoesNotExist:
+            return Response(result_error)
+
     
     
 class DeviceDeleteAPI(APIView):
@@ -402,6 +493,33 @@ class DeviceLogListAPI(APIView):
         
         result_error['data'] = serializer.errors
         return Response(result_error)
+    
+    
+class DeviceLogDetailsAPI(APIView):
+    
+    permission_classes = []
+
+    
+    def get(self, request, id):
+        result = {
+            'status': HTTP_200_OK,
+            'message': 'Success',
+            'data': {}
+        }
+        
+        result_error = {
+            'status': HTTP_404_NOT_FOUND,
+            'message': 'Device Logs Not Found',
+            'data': {}
+        }
+
+        try:
+            device_log = DeviceLog.objects.get(id=id)
+            serializer = DeviceLogSerializer(device_log)
+            result['data'] = serializer.data
+            return Response(result)
+        except DeviceLog.DoesNotExist:
+            return Response(result_error)
     
     
 class DeviceLogDeleteAPI(APIView):
