@@ -1,6 +1,6 @@
 # Asset-Tracker-App
 
-The Corporate Asset Tracking System is a web application built using Django that enables companies to efficiently manage their corporate assets, such as phones, tablets, laptops, and other devices, which are handed out to employees. The application provides a streamlined way for companies to track the distribution, condition, and history of assets, ensuring effective asset management across different teams and departments.
+The Asset Tracker System is a web application built using Django that enables companies to efficiently manage their corporate assets, such as phones, tablets, laptops, and other devices, which are handed out to employees. The application provides a streamlined way for companies to track the distribution, condition, and history of assets, ensuring effective asset management across different teams and departments.
 
 ## Features
 
@@ -42,22 +42,37 @@ The Corporate Asset Tracking System is a web application built using Django that
 
 5. **Admin Panel**: Access the admin panel at `http://127.0.0.1:8000/admin/` to add companies, employees, devices, and manage device logs.
 
-6. **API Endpoints**: Access the api root at 'api/asset/' to manage assets programmatically. Refer to the API documentation for more details.
+6. **API Endpoints**: Access the api root at 'api/' to manage assets programmatically. Refer to the API documentation for more details.
 
 
 ## API Documentation
 
 The API provides the following endpoints:
-- `api/asset/companies/`: List and create companies.
-- 'api/asset/companies/<int: id>': Get, update and delete specific company with id
-- `api/asset/employees/`: List and create employees.
-- 'api/asset/employees/<int: id>': Get, update and delete specific employee with id
-- `api/asset/assets/`: List and create assets. assets can also be delegated to employees.
-- `api/asset/assets/<int: id>`: Get, update and delete specific asset with id 
-- `api/asset/assets-logs/`: List and create asset logs. asset logs record checkout and return actions.
-- `api/asset/assets-logs/<int: id>`:
-  - **PATCH**: Update details of an asset log.
-  - **DELETE**: Delete an asset log.
-- `api/asset/assets-logs/?employee=id`: Filter assets logs by employee ID.
-- `api/asset/assets-logs/?company=id `: Filter assets logs by company ID.
-- `api/asset/assets-logs/?employee=id&employee__company=id`: Filter assets logs by both employee ID and company ID.
+
+- `api/company-list/`: List companies.
+- `api/company/detail/<int:id>/`: Details of companies.
+- 'api/company/update/<int:id>': update specific company with id
+- 'api/company/create/<int:id>': Create company with id
+- 'api/company/delete/<int:id>': delete specific company with id
+
+
+- `api/employee-list/`: List Employees.
+- `api/employee/detail/<int:id>/`: Details of Employee.
+- 'api/employee/update/<int:id>': update specific Employee with id
+- 'api/employee/create/<int:id>': Create Employee with id
+- 'api/employee/delete/<int:id>': delete specific Employee with id
+
+- `api/device-list/`: List Devices.
+- `api/device/detail/<int:id>/`: Details of Device.
+- 'api/device/update/<int:id>': update specific Device with id
+- 'api/device/create/<int:id>': Create Device with id
+- 'api/device/delete/<int:id>': delete specific Device with id
+
+
+- `api/device-log-list/`: List Devices Logs.
+- `api/device-log/detail/<int:id>/`: Details of Device Log.
+- 'api/device-log/update/<int: id>': update specific Device Log with id
+- 'api/device-log/create/<int: id>': Create Device Log with id
+- 'api/device-log/delete/<int: id>': delete specific Device Log with id
+
+
