@@ -38,11 +38,16 @@ The Asset Tracker System is a web application built using Django that enables co
 
     ```bash
     python manage.py runserver
+
+5. **Run For Testing**: For Test Case :
+
+    ```bash
+    python manage.py test
     ```
 
-5. **Admin Panel**: Access the admin panel at `http://127.0.0.1:8000/admin/` to add companies, employees, devices, and manage device logs.
+6. **Admin Panel**: Access the admin panel at `http://127.0.0.1:8000/admin/` to add companies, employees, devices, and manage device logs.
 
-6. **API Endpoints**: Access the api root at 'api/' to manage assets programmatically. Refer to the API documentation for more details.
+7. **API Endpoints**: Access the api root at 'api/' to manage assets programmatically. Refer to the API documentation for more details.
 
 
 ## API Documentation
