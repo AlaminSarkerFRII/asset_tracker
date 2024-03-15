@@ -31,7 +31,7 @@ admin.site.register(Device, DeviceAdmin)
 
 class DeviceLogAdmin(admin.ModelAdmin):
     model = DeviceLog
-    fields = ['device_name', 'employee_name', 'check_out_at', 'check_in_at', 'condition_when_checked_out', 'condition_when_checked_at']
+    fields = ['id','device_name', 'employee_name', 'check_out_at', 'check_in_at', 'condition_when_checked_out', 'condition_when_checked_at']
 
 
 admin.site.register(DeviceLog, DeviceLogAdmin)
